@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/access_page/sign-up.css">
+    <link rel="stylesheet" href="css/access_page/sign-up-create.css">
+    <link rel="shortcut icon" href="img/avatar.png" type="image/x-icon">
+    <title>Sign Up page</title>
+</head>
+<body>
+
+    <section id="load-anim">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <div id="div5"></div>
+    </section>
+    <div id="create-user-id-load-cont">
+        <div class="bar-loader">
+            <div class="status-message" id="status">Starting...</div>
+            <div class="bar"></div>
+            <div class="percentage-text" id="percentage">0%</div>
+        </div>
+    </div>
+<div class="overall-cont" id="overall-display">
+        <div class="greet-cont blob">
+            <a href="index.html">
+                <button class="arrow" style="color: rgb(8, 40, 67); font-weight: bold;">back</button>
+            </a>
+                <h class="greet-cont-text"><span class="span1">Sign Up</span><span class="span2">to get started</span> <img src="img/getstartedicon.png" width="50px"></h1>
+        </div>
+    <div class="sign-up-container" id="cont">
+        <div class="sign-up-container-text"><span class="span">Sign Up</span></div>
+        <form id="form">
+            <div class="row">
+                <img src="img/avatar.png" width="50px">
+                <input type="text" placeholder="Enter your full name" id="val1" required><br>
+            </div>
+            <div class="row">
+                <img src="img/emailicon.png" width="50px">
+                <input type="email" placeholder="Enter your Email" id="val2" required>  <br>  
+            </div> 
+            <div class="row">
+                <img src="img/padlock.png" width="50px">
+                <input type="password" placeholder="Create a password" id="val3" required>  <br>  
+            </div> 
+            
+            <div class="row"> 
+                                      
+                    <button class="sub" type="submit">Submit</button>
+                
+            </div>
+        </form>
+</div>
+    <script src="js/signup.js"></script>
+</body>
+</html>
