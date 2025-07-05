@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/generate-load.css">
+    <link rel="shortcut icon" href="img/frame.png" type="image/x-icon">
+    <title>Workspace</title>
+</head>
+<body>
+<section id="load-anim">
+    <h1 class="h1-load-abs">loading Workspace...</h1>
+    <div class="scene">
+    <div class="face front"></div>
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+</section>
+<section class="percentage-loader-cont" id="bar-complete">
+    <div class="percentage-loader">
+        <div class="progress-bar">
+        <div class="fill" id="fill-bar"></div>
+        </div>
+        <div class="percentage-text" id="percentage">0%</div>
+        <div class="status-message" id="status">Starting...</div>
+    </div>
+</section>
+    <main>
+        <div id="overall-workspace-display">
+            <div class="header top-tool-display" id="disp">
+                <h1 class="h1-primary-1">
+                    <img src="img/workspace-logo.png" width="35px">
+                        Workspace
+                </h1>
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="img/Kampo.png" width="50px">
+                        <h1 class="Kampo-heading">ampo</h1>
+                    </div>
+                </a>
+                <button id="menu-cont" onclick="document.getElementById('menu-pop').style.display='flex'">
+                    Menu
+                <div class="block">
+                    <div class="bar1 bar-gen"></div>
+                    <div class="bar2 bar-gen"></div>
+                    <div class="bar3 bar-gen"></div>
+                </div>
+                </button>
+                <div class="menu-display-container" id="menu-pop">
+                    <button class="cancel-btn" onclick="document.getElementById('menu-pop').style.display='none'">
+                            Cancel
+                    </button>
+                    <a href="index.html" class="menu-link">
+                        <img src="img/logout (1).png" width="50px" class="menu-icon gen-icon">
+                        Log Out
+                    </a>
+                    
+                    <a href="settings.html" class="menu-link">
+                        <img src="img/settings.png" width="50px" class="menu-icon gen-icon">
+                        Settings
+                    </a>
+                    
+                    <a href="ai.html" class="menu-link">
+                        <img src="img/artificial-intelligence.png" width="50px" class="menu-icon gen-icon">
+                        AI
+                    </a>
+                    <h3 style="font-size: 30px; font-family: sans-serif; text-align: center; cursor: default;">More</h3>
+                    <hr>
+                    <a href="fomcal.html" class="menu-link">
+                        <img src="img/calculator.png" width="50px" class="menu-icon gen-icon">
+                        Fomular Calculator
+                    </a>
+                    
+                    <a href="Quizgame.html" class="menu-link">
+                        <img src="img/ideas.png" width="50px" class="menu-icon gen-icon">
+                        Quiz Game
+                    </a>
+                    
+                    <a href="Sschool.html" class="menu-link">
+                        <img src="img/searchicon.png" width="50px" class="menu-icon gen-icon">
+                        Search a School 
+                    </a>
+                    
+                    <a href="about.html" class="menu-link">
+                        <img src="img/info.png" width="50px">
+                        Info
+                    </a>
+                </div>
+            </div>
+            <div class="primary-flex">
+                <div class="side-bar left-tool-display" id="float">
+                    <div class="regular-tool-cont">
+                        <div class="side-bar-tool" id="home-tool" onclick="homeFunc()">
+                            <div class="scale-anim-div">
+                                <img src="img/home.png" width="30px">
+                                <div class="side-bar-tool-text">
+                                    Home
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-bar-tool" id="set-tool" onclick="setFunc()">
+                            <div class="scale-anim-div">
+                                <img src="img/generateicon.png" width="30px">
+                                <div class="side-bar-tool-text">
+                                    Set guide
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-bar-tool" id="run-tool" onclick="runFunc()">
+                            <div class="scale-anim-div">
+                                <img src="img/play-button.png" width="30px">
+                                <div class="side-bar-tool-text">
+                                    Start
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="extra-tool-div">
+                                <h3 style="font-size: 25px; font-family: sans-serif; text-align: center; background-color: rgb(0, 0, 0); color: #ffffff; cursor: default;">More 
+                                    <span class="resp-disp">tools</span>
+                                </h3>
+                                    <hr>
+                                <div class="side-bar-tool cal-tool">
+                                <div class="scale-anim-div">
+                                    <img src="img/calculator.png" width="30px">
+                                    <div class="side-bar-tool-text">
+                                        Calculator
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="side-bar-tool marker-tool">
+                                <div class="scale-anim-div">
+                                    <img src="img/doneicon.png" width="30px">
+                                    <div class="side-bar-tool-text">
+                                        Exam marker
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        <div class="premium-tool-cont">
+
+                            <h3 style="font-size: 25px; font-family: sans-serif; text-align: center; background-color: gold; color: #000000; cursor: default;">Premium 
+                                <span class="resp-disp">tools</span>
+                            </h3>
+                                    
+                            <div class="side-bar-tool pdf-tool">
+                                <div class="scale-anim-div">
+                                    <img src="img/pdficon.png" width="30px">
+                                    <div class="side-bar-tool-text">
+                                        PDF
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class="main-cont" id="primary-toogle-display">
+                    <div class="home-page" id="home-page-dis">
+                        <div class="home-logo">
+                            <img src="img/rocket.png" width="400px" class="home-logo-img-icon-res">
+                        </div>
+                        <div class="home-heading-cont">
+                            <h1 class="home-heading-cont-text">
+                                Hello <span id="username"></span>,<br>
+                                Welcome to your workspace
+                            </h1>
+                            <h3 class="guide-head-txt"><u>Guide-lines</u></h3>
+                            <ul>
+                                <li>Set your marking guide</li>
+                                <li>Start generating</li>
+                                <li>Convert to PDF <span class="pre-txt">premium</span></li>
+                            </ul>
+                            <button class="start-btn" onclick="setFunc()">
+                                Start now!
+                            </button>
+                        </div>
+                    </div>
+                    <div class="set-page" id="set-page-dis">
+                           <div class="set-input-cont">
+                                <h1 class="set-input-cont-text">
+                                    Set a marking guide   
+                                </h1>
+                                <div class="input-cont">
+                                    <input type="number" placeholder="Enter pass mark for A" id="valA" class="inp-gen">
+                                    <br>
+                                    <input type="number" placeholder="Enter pass mark for B" id="valB" class="inp-gen">
+                                    <br>
+                                    <input type="number" placeholder="Enter pass mark for C" id="valC" class="inp-gen">
+                                    <br>
+                                    <input type="number" placeholder="Enter pass mark for D" id="valD" class="inp-gen">
+                                    <br>
+                                    <input type="number" placeholder="Enter pass mark for F" id="valF" class="inp-gen">
+<br>
+                                    <button class="cont-btn" onclick="saveFunc()" id="disappear">
+                                        Set
+                                    </button>
+                                    <div id="done">
+
+                                    </div>
+                                </div>
+                           </div>
+                    </div>
+                    <div class="run-page" id="run-page-dis">
+                        <h1 class="generate-head-text">
+                            Start Generating
+                        </h1>
+                    <div class="generate-box">
+
+                        <input type="number" placeholder="Mathematics Score [0 - 100]" id="val1" class="inp-general"> 
+
+                        <input type="number" placeholder="English Score [0 - 100]" id="val2" class="inp-general"> 
+                
+                        <input type="number" placeholder="Yoruba Score [0 - 100]" id="val3" class="inp-general"> 
+
+                        <input type="number" placeholder="CCA Score [0 - 100]" id="val4" class="inp-general"> 
+                
+                        <input type="number" placeholder="Basic Technology Score [0 - 100]" id="val5" class="inp-general"> 
+
+                        <input type="number" placeholder="Basic science Score [0 - 100]" id="val6" class="inp-general">
+
+                        <input type="number" placeholder="Business studies Score [0 - 100]" id="val7" class="inp-general"> 
+
+                        <input type="number" placeholder="Civic Education Score [0 - 100]" id="val8" class="inp-general">
+                  
+                        <input type="number" placeholder="IRS Score [0 - 100]" id="val9" class="inp-general">
+
+                        <input type="number" placeholder="Agric science Score [0 - 100]" id="val10" class="inp-general"> 
+
+                        <input type="number" placeholder="History Score [0 - 100]" id="val11" class="inp-general">
+
+                        <input type="number" placeholder="Social studies Score [0 - 100]" id="val12" class="inp-general">    
+                
+                        <input type="number" placeholder="Home Economics Score [0 - 100]" id="val13" class="inp-general">
+
+                        <input type="number" placeholder="PHE Score [0 - 100]" id="val14" class="inp-general">  
+                    
+                         <input type="number" placeholder="Arabic Score [0 - 100]" id="val15" class="inp-general">  
+                         
+                         <input type="number" placeholder="Hifsu Score [0 - 100]" id="val16" class="inp-general">  
+                    
+                        <input type="number" placeholder="Computer Score [0 - 100]" id="val17" class="inp-general">  
+
+                        <input type="number" placeholder="Security Education Score [0 - 100]" id="val18" class="inp-general">  
+                    </div>
+                <button class="generate-btn" onclick="generate()">
+                    Start Generating <img src="img/play-button.png" width="17px">
+                </button>
+                <table id="reportTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Subject</th>
+                            <th>Score</th>
+                            <th>Grade</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- rows will show up dynamically -->
+                    </tbody>
+                </table>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        <div class="generated-res-wrapper" id="generated-result">
+           <div class="top-panel-bar">
+                <button class="back-tool-btn gen-panel-tool-style">
+                    Back
+                </button>
+                <input type="text" class="united-save-cont" placeholder="Input file name">
+                <button class="more">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </button>
+           </div> 
+        </div>
+    </main>
+    <script src="js/start.js"></script>
+</body>
+</html>

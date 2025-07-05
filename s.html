@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style></style>
+    <title>Document</title>
+    <style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f2f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.percentage-loader {
+  text-align: center;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  transition: width 0.3s ease;
+}
+
+.percentage-text {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.status-message {
+  font-size: 16px;
+  color: #555;
+  margin-top: 8px;
+  transition: opacity 0.3s ease;
+}
+
+
+    </style>
+</head>
+<body>
+  <div class="percentage-loader">
+    <div class="progress-bar">
+      <div class="fill" id="fill-bar"></div>
+    </div>
+    <div class="percentage-text" id="percentage">0%</div>
+    <div class="status-message" id="status">Loading application...</div>
+  </div>
+  
+
+
+  
+<script>
+  let percent = 0;
+  const fill = document.getElementById("fill-bar");
+  const text = document.getElementById("percentage");
+  const status = document.getElementById("status");
+
+  const statusMessages = {
+    0: "Loading application...",
+    25: "Initializing components...",
+    50: "Creating environment...",
+    75: "Finalizing setup...",
+    95: "Almost done..."
+  };
+
+  const interval = setInterval(() => {
+    if (percent <= 100) {
+      fill.style.width = percent + "%";
+      text.textContent = percent + "%";
+
+      // Update status message if one is defined for the current percent
+      if (statusMessages[percent]) {
+        status.textContent = statusMessages[percent];
+      }
+
+      percent += 5;
+    } else {
+      status.textContent = "Completed!";
+      clearInterval(interval);
+    }
+  }, 1000);
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.frame-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  margin: 0;
+}
+
+.frame-gen{
+  overflow: auto;
+}
+.chatbox-frame{
+  width: 600px;
+  height: 70vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+  background-color: #141414;
+  overflow: auto;
+}
+.header-frame{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-text-frame{
+  height: 40px;
+  width: 200px;
+  background-color: #272727;
+  border-radius: 10px;
+}
+.conversation-box{
+  height: 200px;
+  width: 400px;
+  background-color: #272727;
+  border-radius: 20px;
+}
+.user-input-box-cont{
+  height: 80px;
+  width: 400px;
+  background-color: #272727;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.input-box-frame{
+  width: 300px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #414141;
+}
+.send-btn-frame{
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  background-color: #414141;
+}
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
